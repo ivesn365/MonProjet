@@ -9,12 +9,14 @@ public class Test {
 		double monTab[][] = {{12, 63, 7, 10, 19, 9, 13, 4}, {1, 324, 789, 5.5, 19, 0.98, 1.3, 4.7}};
 		int i = 0;
 		int j = 0;
-		Scanner sc = new Scanner(System.in);
+		i = moyenTab();
+		System.out.println(i);
+		/*Scanner sc = new Scanner(System.in);
 		System.out.println("Veuillez taper une indice : ");
 		int str = sc.nextInt();
 		System.out.println("Veuillez taper un nombre : ");
-		int s = sc.nextInt();
-		Remplacement(str, s);
+		int s = sc.nextInt();*/
+		//Remplacement(str, s);
 		/*while( i < 2) {
 			j = 0;
 			while(j < 8) {
@@ -51,5 +53,25 @@ public class Test {
 		
 		
 	}
+	
+  public static int moyenTab() {
+	  Scanner taille = new Scanner(System.in);
+	  int taille_tab = taille.nextInt();
+	  Scanner element_tab = new Scanner(System.in);
+	  System.out.println("Veuillez taper la taille du tableau : ");
+	  int tableau[] = new int[taille_tab];
+	  int i = 0, som = 0, moy = 0;
+	  
+	  while(i < tableau.length) {
+		  System.out.println("Veuillez taper les contenues du tableau : ");
+		  int element = element_tab.nextInt();
+		  tableau[i] = element;
+		  som += tableau[i]; 
+		  i++;
+	  }
+	  return som/taille_tab;
+	  
+	  
+  }
 
 }
